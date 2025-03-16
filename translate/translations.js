@@ -1,8 +1,8 @@
 // JSON tarjima fayllarini olish
 const translations = {
-    uz: fetch('../translate/uz.json').then(res => res.json()).catch(err => console.error("Uzbek JSON fayli yuklanmadi:", err)),
-    ko: fetch('../translate/ko.json').then(res => res.json()).catch(err => console.error("Korean JSON fayli yuklanmadi:", err)),
-    en: fetch('../translate/en.json').then(res => res.json()).catch(err => console.error("English JSON fayli yuklanmadi:", err))
+    uz: fetch('/translate/uz.json').then(res => res.json()).catch(err => console.error("Uzbek JSON fayli yuklanmadi:", err)),
+    ko: fetch('/translate/ko.json').then(res => res.json()).catch(err => console.error("Korean JSON fayli yuklanmadi:", err)),
+    en: fetch('/translate/en.json').then(res => res.json()).catch(err => console.error("English JSON fayli yuklanmadi:", err))
 };
 
 // LocalStorage orqali oxirgi tanlangan tilni olish
