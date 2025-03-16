@@ -1,0 +1,35 @@
+// Fayllarni to'g'ridan-to'g'ri import qilish
+import uz from './uz.json' assert { type: 'json' };
+import en from './en.json' assert { type: 'json' };
+import ko from './ko.json' assert { type: 'json' };
+
+// Til ma'lumotlarini saqlash
+const translations = { uz, en, ko };
+
+// LocalStorage orqali oxirgi tanlangan tilni olish
+let currentLanguage = localStorage.getItem('language') || 'en';
+
+// Tilni o'zgartirish funksiyasi
+function changeLanguage(language) {
+    currentLanguage = language;
+    localStorage.setItem('language', language); // LocalStorage-ga saqlash
+
+    const langData = translations[language];
+
+    document.querySelectorAll('[data-key]').forEach((element) => {
+        const key = element.getAttribute('data-key');
+        if (langData && langData[key]) {
+            element.innerHTML = langData[key].replace(/\n/g, "<br>");
+        }
+    });
+}
+
+// Sahifa yuklanganda avvalgi tanlangan tilni qo‘llash
+window.addEventListener('DOMContentLoaded', () => {
+    changeLanguage(currentLanguage);
+    document.getElementById('language').value = currentLanguage;
+
+    document.getElementById('language').addEventListener('change', (event) => {
+        changeLanguage(event.target.value);
+    });
+});
