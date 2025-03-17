@@ -20,7 +20,6 @@ Technologies
 HTML: Page structure
 CSS: Visual appearance and responsiveness of the page
 JavaScript: Language switching, smooth navigation between pages
-i18next: Multi-language user interface
 Google Script: Handling user messages
 Netlify: Hosting and deployment of the website
 How it Works
