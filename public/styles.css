@@ -585,8 +585,10 @@ textarea {
 @media screen and (max-width: 991px) {
 
     body {
-        background-attachment: fixed;
-        background-size: cover;
+        background-image: url('./image/AL-MADINA_HD.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .navbar {
@@ -616,9 +618,10 @@ textarea {
 @media screen and (max-width: 768px) {
 
     body {
-        background-attachment: fixed;
+        background-image: url('./image/AL-MADINA_HD.png');
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: center;
     }
 
     .menu {
@@ -744,9 +747,10 @@ textarea {
 @media screen and (max-width: 420px) {
 
     body {
-        background-attachment: fixed;
+        background-image: url('./image/AL-MADINA_HD.png');
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: center;
     }
 
     .nav-links a {
