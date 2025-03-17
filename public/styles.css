@@ -750,7 +750,7 @@ textarea {
 
     body {
         background-image: url('./image/al-madina.bg.png');
-        background-size: 100% 600px; 
+        background-size: cover; 
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
