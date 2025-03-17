@@ -68,3 +68,60 @@ document.getElementById("copy-button").addEventListener("click", function() {
 
 
 
+///////////////////////////////////////
+
+// Tarjima ma'lumotlarini saqlash uchun ob'ekt
+let translations = {};
+
+// Tanlangan tilni saqlash (LocalStorage dan olamiz yoki standart 'en')
+let currentLanguage = localStorage.getItem('language') || 'en';
+
+// Til ma'lumotlarini yuklash funksiyasi
+async function loadTranslations(language) {
+    try {
+        const response = await fetch(`translate/${language}.json`);
+        if (!response.ok) throw new Error(`JSON fayl topilmadi: ${language}`);
+        translations[language] = await response.json();
+    } catch (error) {
+        console.error('Xato:', error);
+    }
+}
+
+// Barcha tillarni yuklash
+async function loadAllTranslations() {
+    await Promise.all(['en', 'uz', 'ko'].map(loadTranslations));
+}
+
+// Tilni o'zgartirish funksiyasi
+function changeLanguage(language) {
+    currentLanguage = language;
+    localStorage.setItem('language', language); // Tanlangan tilni saqlash
+
+    const langData = translations[language];
+    if (!langData) return;
+
+    document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (langData[key]) {
+            element.textContent = langData[key];
+        }
+    });
+}
+
+// Sahifa yuklanganda
+window.addEventListener('DOMContentLoaded', async () => {
+    await loadAllTranslations(); // Barcha tillarni yuklash
+    changeLanguage(currentLanguage); // Joriy tilni qo‘llash
+
+    // Til tanlash elementini topish
+    const languageSelect = document.getElementById('language');
+    if (languageSelect) {
+        languageSelect.value = currentLanguage; // Joriy tilni tanlash
+
+        // Til o'zgartirilganda
+        languageSelect.addEventListener('change', (event) => {
+            const selectedLanguage = event.target.value;
+            changeLanguage(selectedLanguage);
+        });
+    }
+});
