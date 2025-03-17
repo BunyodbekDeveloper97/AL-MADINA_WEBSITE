@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url('image/AL-MADINA_HD.png');
+    background-image: url('./image/AL-MADINA_HD.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -583,6 +583,12 @@ textarea {
 /* Break Points ---------->*/
 
 @media screen and (max-width: 991px) {
+
+    body {
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
     .navbar {
         padding: 10px;
     }
@@ -608,6 +614,13 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
+
+    body {
+        background-attachment: scroll;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
     .menu {
         display: block;              
         background-color: #008000;   
@@ -729,7 +742,13 @@ textarea {
 
 
 @media screen and (max-width: 420px) {
-    
+
+    body {
+        background-attachment: scroll;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
     .nav-links a {
         font-size: 25px;  
         padding: 4px; 

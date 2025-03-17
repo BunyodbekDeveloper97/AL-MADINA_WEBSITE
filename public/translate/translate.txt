@@ -1,7 +1,7 @@
 // Fayllarni to'g'ridan-to'g'ri import qilish
-import uz from './uz.json' assert { type: 'json' };
-import en from './en.json' assert { type: 'json' };
-import ko from './ko.json' assert { type: 'json' };
+import uz from '/uz.json' assert { type: 'json' };
+import en from '/en.json' assert { type: 'json' };
+import ko from '/ko.json' assert { type: 'json' };
 
 // Til ma'lumotlarini saqlash
 const translations = { uz, en, ko };
