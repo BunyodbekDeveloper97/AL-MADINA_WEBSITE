@@ -586,9 +586,10 @@ textarea {
 
     body {
         background-image: url('./image/AL-MADINA_HD.png');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        background-attachment: fixed;
     }
 
     .navbar {
@@ -619,9 +620,10 @@ textarea {
 
     body {
         background-image: url('./image/AL-MADINA_HD.png');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        background-attachment: fixed;
     }
 
     .menu {
@@ -748,9 +750,10 @@ textarea {
 
     body {
         background-image: url('./image/AL-MADINA_HD.png');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        background-attachment: fixed;
     }
 
     .nav-links a {
