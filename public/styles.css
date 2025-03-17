@@ -617,7 +617,7 @@ textarea {
 
     body {
         background-attachment: scroll;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 
@@ -745,7 +745,7 @@ textarea {
 
     body {
         background-attachment: scroll;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 
