@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url('/image/AL-MADINA_HD.png');
+    background-image: url('image/AL-MADINA_HD.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
