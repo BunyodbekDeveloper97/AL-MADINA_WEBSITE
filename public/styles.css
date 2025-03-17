@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url('./image/AL-MADINA_HD.png');
+    background-image: url('./image/al-madina.bg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -585,7 +585,7 @@ textarea {
 @media screen and (max-width: 991px) {
 
     body {
-        background-image: url('./image/AL-MADINA_HD.png');
+        background-image: url('./image/al-madina.bg.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -619,7 +619,7 @@ textarea {
 @media screen and (max-width: 768px) {
 
     body {
-        background-image: url('./image/AL-MADINA_HD.png');
+        background-image: url('./image/al-madina.bg.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -749,8 +749,8 @@ textarea {
 @media screen and (max-width: 420px) {
 
     body {
-        background-image: url('./image/AL-MADINA_HD.png');
-        background-size: cover;
+        background-image: url('./image/al-madina.bg.png');
+        background-size: 100% 600px; 
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
