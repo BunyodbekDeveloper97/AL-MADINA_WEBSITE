@@ -585,7 +585,7 @@ textarea {
 @media screen and (max-width: 991px) {
 
     body {
-        background-attachment: scroll;
+        background-attachment: fixed;
         background-size: cover;
     }
 
@@ -616,8 +616,8 @@ textarea {
 @media screen and (max-width: 768px) {
 
     body {
-        background-attachment: scroll;
-        background-size: cover;
+        background-attachment: fixed;
+        background-size: contain;
         background-repeat: no-repeat;
     }
 
@@ -744,8 +744,8 @@ textarea {
 @media screen and (max-width: 420px) {
 
     body {
-        background-attachment: scroll;
-        background-size: cover;
+        background-attachment: fixed;
+        background-size: contain;
         background-repeat: no-repeat;
     }
 
