@@ -180,7 +180,7 @@ function openMap() {
         // Agar ilova ochilmasa, 2 soniyadan keyin vebga yo‘naltiradi
         setTimeout(() => {
             window.location.href = kakaoMapURL;
-        }, 2000);
+        }, 3000);
     } else {
         // Kompyuterda yangi tabda ochadi
         window.open(kakaoMapURL, "_blank");
