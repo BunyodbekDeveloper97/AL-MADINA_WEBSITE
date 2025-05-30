@@ -26,22 +26,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Menu ikonasi bosilganda menyuni ochish/yopish
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menu-icon");
     const navLinks = document.querySelector(".nav-links");
-
+  
     menuIcon.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
+      navLinks.classList.toggle("active");
+  
+      // Iconani almashtirish
+      if (menuIcon.classList.contains("bx-menu")) {
+        menuIcon.classList.remove("bx-menu");
+        menuIcon.classList.add("bx-x"); // X ko‘rinishi
+      } else {
+        menuIcon.classList.remove("bx-x");
+        menuIcon.classList.add("bx-menu");
+      }
     });
-
+  
     // Tashqariga bosilganda menyuni yopish
     document.addEventListener("click", function (event) {
-        if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
-            navLinks.classList.remove("active");
-        }
+      if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+        navLinks.classList.remove("active");
+  
+        // Ikonani qayta menu holatiga olib kelish
+        menuIcon.classList.remove("bx-x");
+        menuIcon.classList.add("bx-menu");
+      }
     });
-});
+  });
+  
 
 // Kartadagi raqamni nusxalash (`copy-button`)
 document.getElementById("copy-button").addEventListener("click", function() {
@@ -125,3 +138,40 @@ window.addEventListener('DOMContentLoaded', async () => {
         });
     }
 });
+
+
+
+////////////////// Qurbon hayiti eslatma Doska /////////////
+function updateCountdown() {
+    const countdownEl = document.getElementById('countdown');
+    const eventDate = new Date('2025-06-07T07:00:00');
+    const now = new Date();
+    const diff = eventDate - now;
+  
+    if (!translations[currentLanguage]) return;
+  
+    if (diff <= 0) {
+      // Vaqt o'tib bo'lgan bo‘lsa
+      countdownEl.textContent = translations[currentLanguage]['startedText'];
+      return;
+    }
+  
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+  
+    // JSON dan `countdown` matnini olish va {{}} joylarini almashtirish
+    const template = translations[currentLanguage]['countdown'];
+    const formattedCountdown = template
+      .replace('{{days}}', days)
+      .replace('{{hours}}', hours)
+      .replace('{{minutes}}', minutes)
+      .replace('{{seconds}}', seconds);
+  
+    countdownEl.textContent = formattedCountdown;
+  }
+  
+  // Har soniyada yangilash
+  setInterval(updateCountdown, 1000);
+  

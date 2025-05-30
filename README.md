@@ -39,4 +39,6 @@ Edit
 git clone https://github.com/username/al-madina-mosque.git
 
 
-FIGMA Link : https://www.figma.com/design/5IAbIuv6XHvkREpGQl85nC/AL-MADINA-Masjid?node-id=14-2&t=BnKfPHX4ZnuCngmH-1
+FIGMA Design For Mobile and Laptop  
+Prototype link for LapTop : https://www.figma.com/proto/5IAbIuv6XHvkREpGQl85nC/AL-MADINA-Masjid?node-id=14-2&t=BnKfPHX4ZnuCngmH-1
+Prototype link for Mobile : https://www.figma.com/proto/5IAbIuv6XHvkREpGQl85nC/AL-MADINA-Masjid?node-id=18-3769&t=BnKfPHX4ZnuCngmH-1
