@@ -1,5 +1,3 @@
-
-
 // Navbar linklari orqali sahifada silliq harakatlanish
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
@@ -26,38 +24,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Mobil menyu toggle va ikonani almashtirish
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menu-icon");
     const navLinks = document.querySelector(".nav-links");
-  
+
     menuIcon.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-  
-      // Iconani almashtirish
-      if (menuIcon.classList.contains("bx-menu")) {
-        menuIcon.classList.remove("bx-menu");
-        menuIcon.classList.add("bx-x"); // X ko‘rinishi
-      } else {
-        menuIcon.classList.remove("bx-x");
-        menuIcon.classList.add("bx-menu");
-      }
+        navLinks.classList.toggle("active");
+
+        // Iconani almashtirish
+        if (menuIcon.classList.contains("bx-menu")) {
+            menuIcon.classList.remove("bx-menu");
+            menuIcon.classList.add("bx-x"); // X ko‘rinishi
+        } else {
+            menuIcon.classList.remove("bx-x");
+            menuIcon.classList.add("bx-menu");
+        }
     });
-  
+
     // Tashqariga bosilganda menyuni yopish
     document.addEventListener("click", function (event) {
-      if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
-        navLinks.classList.remove("active");
-  
-        // Ikonani qayta menu holatiga olib kelish
-        menuIcon.classList.remove("bx-x");
-        menuIcon.classList.add("bx-menu");
-      }
+        if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+            navLinks.classList.remove("active");
+
+            // Ikonani qayta menu holatiga olib kelish
+            menuIcon.classList.remove("bx-x");
+            menuIcon.classList.add("bx-menu");
+        }
     });
-  });
-  
+});
 
 // Kartadagi raqamni nusxalash (`copy-button`)
-document.getElementById("copy-button").addEventListener("click", function() {
+document.getElementById("copy-button").addEventListener("click", function () {
     const cardNumberElement = document.getElementById("card-number");
     if (!cardNumberElement) return;  // Agar element topilmasa, davom etmaymiz
 
@@ -67,19 +65,16 @@ document.getElementById("copy-button").addEventListener("click", function() {
         return;
     }
 
-    navigator.clipboard.writeText(cardNumber).then(function() {
+    navigator.clipboard.writeText(cardNumber).then(function () {
         const copiedText = document.getElementById("copied-text");
         if (!copiedText) return;
 
         copiedText.style.display = "block";
         setTimeout(() => copiedText.style.display = "none", 3000);
-    }).catch(function(error) {
+    }).catch(function (error) {
         console.error("Clipboard nusxalashda xatolik yuz berdi: ", error);
     });
 });
-
-
-
 
 ///////////////////////////////////////
 
@@ -139,39 +134,55 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-
-
 ////////////////// Qurbon hayiti eslatma Doska /////////////
 function updateCountdown() {
     const countdownEl = document.getElementById('countdown');
     const eventDate = new Date('2025-06-07T07:00:00');
     const now = new Date();
     const diff = eventDate - now;
-  
+
     if (!translations[currentLanguage]) return;
-  
+
     if (diff <= 0) {
-      // Vaqt o'tib bo'lgan bo‘lsa
-      countdownEl.textContent = translations[currentLanguage]['startedText'];
-      return;
+        // Vaqt o'tib bo'lgan bo‘lsa
+        countdownEl.textContent = translations[currentLanguage]['startedText'];
+        return;
     }
-  
+
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const seconds = Math.floor((diff / 1000) % 60);
-  
+
     // JSON dan `countdown` matnini olish va {{}} joylarini almashtirish
     const template = translations[currentLanguage]['countdown'];
     const formattedCountdown = template
-      .replace('{{days}}', days)
-      .replace('{{hours}}', hours)
-      .replace('{{minutes}}', minutes)
-      .replace('{{seconds}}', seconds);
-  
+        .replace('{{days}}', days)
+        .replace('{{hours}}', hours)
+        .replace('{{minutes}}', minutes)
+        .replace('{{seconds}}', seconds);
+
     countdownEl.textContent = formattedCountdown;
-  }
-  
-  // Har soniyada yangilash
-  setInterval(updateCountdown, 1000);
-  
+}
+
+// Har soniyada yangilash
+setInterval(updateCountdown, 1000);
+
+function openMap() {
+    const address = "경기 수원시 영통구 원천동 10"; // Manzilni shu yerga yozing
+    const kakaoMapURL = `https://map.kakao.com/?q=${encodeURIComponent(address)}`;
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        // Mobil qurilmalarda KakaoMap ilovasini ochishga harakat qiladi
+        window.location.href = `kakaomap://search?q=${encodeURIComponent(address)}`;
+
+        // Agar ilova ochilmasa, 2 soniyadan keyin vebga yo‘naltiradi
+        setTimeout(() => {
+            window.location.href = kakaoMapURL;
+        }, 2000);
+    } else {
+        // Kompyuterda yangi tabda ochadi
+        window.open(kakaoMapURL, "_blank");
+    }
+}
