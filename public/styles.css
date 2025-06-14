@@ -128,90 +128,7 @@ body {
     white-space: pre-line;
 }
 
-/* QURBON HAYITI UCHUN ESLATMA DOSKASI -----------*/
-#eid-reminder {
-    max-width: 320px;
-    margin: 20px auto;
-    padding: 20px 25px;
-    background: linear-gradient(135deg, #132344, #6c491e);
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(19, 36, 68, 0.4);
-    color: #f4c220;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    user-select: none;
-    animation: fadeInScale 1s ease forwards;
-  }
-  
-  /* Bosh sarlavha */
-  #eid-reminder h2 {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  }
-  
-  /* Izoh paragraf */
-  #eid-reminder p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 18px;
-    font-weight: 500;
-    color: #f6f1e7;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-  }
-  
-  /* Hisoblagich */
-  #countdown {
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    padding: 10px 15px;
-    background: rgba(240, 233, 210, 0.15);
-    border-radius: 8px;
-    box-shadow: inset 0 0 10px rgba(255,255,255,0.1);
-    letter-spacing: 0.7px;
-    color: #ffecb3;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-  }
-  
-  /* Manzil tugmasi */
-  #addressBtn {
-    display: inline-block;
-    padding: 10px 28px;
-    background-color: #875921;
-    color: #f0e9d2;
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 25px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(108, 73, 30, 0.7);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    user-select: none;
-  }
-  
-  #addressBtn:hover,
-  #addressBtn:focus {
-    background-color: #ee970c;
-    box-shadow: 0 6px 15px rgba(139, 101, 41, 0.9);
-    outline: none;
-    cursor: pointer;
-  }
-  
-  /* Fade & scale animatsiya */
-  @keyframes fadeInScale {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  
+
 /* AboutDonation Page >>>>>>>>>>>*/
 
 .about {
@@ -311,7 +228,7 @@ body {
     margin: 10px;
     border: 1px solid hsl(0, 1%, 28%);
     border-radius: 10px;
-    background-color: #d3d1d1;
+    background-color: #b6cfcf;
     align-items:center;
     justify-content:space-between;
     box-shadow: 0 5px 5px rgb(0, 0, 0, 0.2);
@@ -764,25 +681,6 @@ textarea {
         font-size: 22px;  /* Menyu matnining kattaligini kichraytirish */
     }
 
-    /* ESLATMA --------------> */
-    #eid-reminder {
-        max-width: 90vw;
-        padding: 18px 20px;
-      }
-    
-      #eid-reminder h2 {
-        font-size: 1.4rem;
-      }
-    
-      #countdown {
-        font-size: 1.1rem;
-      }
-    
-      #addressBtn {
-        font-size: 0.9rem;
-        padding: 9px 22px;
-      }
-
     /* About Donations */
     .aboutdonations {
         display: flex;
@@ -881,7 +779,7 @@ textarea {
     }
 
     .overlay h1 {
-        font-size: 30px; /* ESLATMANI UCHIRGANINGA BUNI 36px ga almashtir */
+        font-size: 36px; 
     }
 
     
@@ -898,25 +796,6 @@ textarea {
         height: auto;
         border-radius: 10px;
     }
-
-    /* ESLATMA -------*/
-    #eid-reminder {
-        max-width: 90vw;
-        padding: 18px 20px;
-      }
-    
-      #eid-reminder h2 {
-        font-size: 1.4rem;
-      }
-    
-      #countdown {
-        font-size: 1.1rem;
-      }
-    
-      #addressBtn {
-        font-size: 0.9rem;
-        padding: 9px 22px;
-      }
 
     /* About Donations - Bo‘sh joy va joylashuvni optimallashtirish */
     .aboutdonations {
