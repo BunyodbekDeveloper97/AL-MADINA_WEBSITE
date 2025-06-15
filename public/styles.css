@@ -128,7 +128,6 @@ body {
     white-space: pre-line;
 }
 
-
 /* AboutDonation Page >>>>>>>>>>>*/
 
 .about {
@@ -568,6 +567,48 @@ textarea {
     text-align: center;
 }
 
+/* === Arab harflarini o‘rganish bo‘limi === Arab Tili Harfini Urganish Uchun Link */
+#learning {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 700px;
+  }
+  
+  #learning h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 16px;
+  }
+  
+  #learning p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+  
+  /* Tugma */
+  .learn-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .learn-btn:hover {
+    background-color: #45a049;
+  }
+/* Arab Tili Urganish uchun ishlatilgan LINK  Shu yerda tugagan*/ 
 
 .footer{
     font-family: 'Poppins', sans-serif;
@@ -616,6 +657,28 @@ textarea {
         align-items: center;
     }
 
+    /* === Arab harflarini o‘rganish bo‘limi === Arab Tili Harfini Urganish Uchun Link */
+    #learning {
+        padding: 35px 20px;
+      }
+    
+      #learning h2 {
+        font-size: 1.6rem;
+        margin-bottom: 14px;
+      }
+    
+      #learning p {
+        font-size: 1rem;
+        padding: 0 5px;
+        margin-bottom: 20px;
+      }
+    
+      .learn-btn {
+        padding: 10px 22px;
+        font-size: 1rem;
+        max-width: 280px;
+      }
+    /*===========================*/
 }
 
 @media screen and (max-width: 768px) {
@@ -745,8 +808,25 @@ textarea {
         max-width: 100%;
         height: auto;
     }
+    /* Arab Tili Harfini Urganish Uchun Link LINK LINK LINK boshqa website ulanilgan */
+    #learning {
+        padding: 30px 15px;
+      }
+    
+      #learning h2 {
+        font-size: 1.6rem;
+      }
+    
+      #learning p {
+        font-size: 1rem;
+      }
+    
+      .learn-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
 }
-
+    /*================================*/
 
 @media screen and (max-width: 420px) {
 
@@ -804,6 +884,23 @@ textarea {
         align-items: center;
         gap: 20px; /* Elementlar orasidagi bo‘shliq */
     }
+
+    /*Arab Tili Harfini Urganish Uchun Link LINK LINK LINK boshqa website ulanilgan======*/
+    #learning h2 {
+        font-size: 1.2rem;
+      }
+    
+      #learning p {
+        font-size: 0.85rem;
+      }
+    
+      .learn-btn {
+        width: 90%;
+        max-width: 250px;
+        font-size: 0.9rem;
+      }
+    /*===================*/
+
     /* Footer - Matnni kichik ekranlar uchun moslash */
     .footer {
         padding: 15px 5%;
